@@ -1,0 +1,27 @@
+
+body {
+    margin: 0;
+}
+
+.container {
+    font-family: 'Helvetica';
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: black;
+    color: wheat;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+}
+
+.buttonStart {
+    width: 60px;
+    margin: auto;
+    background-color: wheat;
+    border-radius: 8px;
+}
