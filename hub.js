@@ -7,6 +7,7 @@ const paperButton = document.createElement('button');
 const buttonChoices = document.createElement('div');
 const playerScore = document.createElement('div');
 const computerScore = document.createElement('div');
+const playAgain = document.createElement('div');
 
 gameArea.classList.add('gameArea');
 gameArea.textContent = 'Rock, paper, or scissors?';
@@ -65,3 +66,37 @@ scissorsButton.addEventListener('click', () => {for (let i=0;i<1;i++) {
     scissorsRoundPlay('scissors',computerDecision())
     }
 });
+
+playAgain.classList.add('playAgain');
+playAgain.textContent = 'Do you wish to play again?';
+const yesAgain = document.createElement('button');
+const noAgain = document.createElement('button');
+yesAgain.classList.add('yesAgain');
+noAgain.classList.add('noAgain');
+yesAgain.textContent = 'Yes!';
+noAgain.textContent = 'No!';
+playAgain.appendChild(yesAgain);
+playAgain.appendChild(noAgain);
+
+yesAgain.addEventListener('click', () => {
+    playAgain.remove();
+    gameArea.textContent = 'First to 5 wins the game!';
+    computerScoreLive = 0;
+    playerScoreLive = 0;
+    playerScore.innerHTML =  "Your score: " + playerScoreLive;
+    computerScore.innerHTML =  "Their score: " + playerScoreLive;
+    alert('Welcome to ezRPS! First to 5 points wins!');
+    container.appendChild(gameArea);
+    gameArea.appendChild(buttonChoices);
+    buttonChoices.appendChild(rockButton);
+    buttonChoices.appendChild(paperButton);
+    buttonChoices.appendChild(scissorsButton);
+    gameArea.appendChild(playerScore);
+    gameArea.appendChild(computerScore);
+    
+});
+
+noAgain.addEventListener('click', () => {
+    playAgain.remove();
+    gameArea.innerHTML = 'Thanks for playing! Refresh if you want to play again!';
+})
