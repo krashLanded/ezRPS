@@ -54,10 +54,22 @@ function scissorsRoundPlay(playerMove, computerMove) {
 function checkScore() {
     if (playerScoreLive == 5) {
         alert('You Win!');
+        buttonChoices.remove();
+        playerScore.remove();
+        computerScore.remove();
+        gameArea.innerHTML = '';
+        gameArea.appendChild(playAgain);
     } else if (computerScoreLive == 5) {
-        alert('You Lose!')
+        alert('You Lose!');
+        buttonChoices.remove();
+        playerScore.remove();
+        computerScore.remove();
+        gameArea.innerHTML = '';
+        gameArea.appendChild(playAgain);
     }
 }
+
+
 
 
 
