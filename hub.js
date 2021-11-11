@@ -31,3 +31,22 @@ buttonStart.addEventListener('click', () => {
     buttonChoices.appendChild(paperButton);
     buttonChoices.appendChild(scissorsButton);
 });
+
+function computerDecision() {
+    randomChoice = gameChoices[Math.floor(Math.random()*gameChoices.length)];
+    return randomChoice.toLowerCase();
+    };
+
+rockButton.addEventListener('click', () => {for (let i=0;i<1;i++) {
+    rockRoundPlay('rock',computerDecision())
+    }
+});
+
+paperButton.addEventListener('click', () => {for (let i=0;i<1;i++) {
+    paperRoundPlay('paper',computerDecision())
+    }
+});
+scissorsButton.addEventListener('click', () => {for (let i=0;i<1;i++) {
+    scissorsRoundPlay('scissors',computerDecision())
+    }
+});
