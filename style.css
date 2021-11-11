@@ -25,3 +25,29 @@ body {
     background-color: wheat;
     border-radius: 8px;
 }
+
+.gameArea {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.buttonChoices {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50px;
+
+}
+ 
+
+.playerScore, .computerScore {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.playAgain {
+    display: flex;
+    flex-direction: column;
+}
